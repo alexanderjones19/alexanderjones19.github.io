@@ -9,8 +9,7 @@ const theme = createMuiTheme({
     },
     secondary: {
       main: indigo[900],
-      dark: '#536dfe',
-      // indigo['A200']
+      dark: indigo['A200'],
       contrastText: indigo[100]
     },
     error: amber,
