@@ -3,6 +3,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import { NavLink } from 'react-router-dom';
 import withStyles from '@material-ui/core/styles/withStyles';
 
 const styles = theme => ({
@@ -20,13 +21,20 @@ const styles = theme => ({
     },
     flexGrow: 1
   },
-  buttons: {
+  marginLink: {
     [theme.breakpoints.between('md', 'lg')]: {
       marginRight: 120
     },
     [theme.breakpoints.up('lg')]: {
       marginRight: 180
-    }
+    },
+    color: theme.palette.primary.contrastText,
+    '&:active': { color: theme.palette.secondary.dark }
+  },
+  link: {
+    color: theme.palette.primary.contrastText,
+    '&:active': { color: theme.palette.secondary.dark },
+    // '&:hover': { color: theme.palette.secondary.dark }
   }
 });
 
@@ -38,9 +46,9 @@ const Nav = (props) => {
         <Typography className={classes.logo} variant="title" color="inherit">
           Alexander Jones
         </Typography>
-        <Button color="inherit">About</Button>
-        <Button color="inherit">Portfolio</Button>
-        <Button className={classes.buttons} color="inherit">Contact</Button>
+        <Button component={NavLink} to="/" color="inherit" className={classes.link}>About</Button>
+        <Button component={NavLink} to="/portfolio" color="inherit" className={classes.link}>Portfolio</Button>
+        <Button component={NavLink} to="/contact" color="inherit" className={classes.marginLink}>Contact</Button>
       </Toolbar>
     </AppBar>
   );
