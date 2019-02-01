@@ -35,20 +35,20 @@ const styles = theme => ({
     backgroundColor: theme.palette.primary.main,
     [theme.breakpoints.between('md', 'lg')]: {
       marginLeft: 120,
-      marginRight: 20
+      marginRight: 10
     },
     [theme.breakpoints.up('lg')]: {
       marginLeft: 180,
       marginRight: 20
     },
     [theme.breakpoints.only('sm')]: {
-      // marginLeft: 5,
-      marginRight: 5
+      marginRight: 10
     },
     [theme.breakpoints.only('xs')]: {
       marginLeft: 100,
       marginRight: 100
-    }
+    },
+    marginTop: 20
   },
   // card: {
   //   // maxWidth: 345,
@@ -58,17 +58,19 @@ const styles = theme => ({
   //   backgroundColor: theme.palette.primary.main
   // },
   aboutPaper: {
-    // marginLeft: 40,
-    // marginRight: 40,
     [theme.breakpoints.between('md', 'lg')]: {
       marginRight: 120,
-      marginLeft: 20
+      marginLeft: 10
+    },
+    [theme.breakpoints.only('sm')]: {
+      marginLeft: 10
     },
     [theme.breakpoints.up('lg')]: {
       marginRight: 180,
       marginLeft: 20
     },
     backgroundColor: theme.palette.primary.main,
+    marginTop: 20
   },
   portrait: {
     width: '100%',
@@ -76,7 +78,7 @@ const styles = theme => ({
     padding: 5
   },
   aboutText: {
-    padding: 5,
+    padding: 10,
     color: theme.palette.primary.contrastText
   }
 });
@@ -85,7 +87,7 @@ const About = (props) => {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <Grid container justify="center" alignItems="center" spacing={24}>
+      <Grid container justify="center" alignItems="flex-start" spacing={24}>
         <Grid item xs={12}>
           <Typography className={classes.header} variant="subheading" align="left">
             Full Stack Developer

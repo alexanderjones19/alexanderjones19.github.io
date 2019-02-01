@@ -5,6 +5,7 @@ import { MuiThemeProvider } from '@material-ui/core/styles';
 import theme from './theme';
 import './App.css';
 import Nav from './components/Nav';
+import Footer from './components/Footer';
 import About from './components/About';
 
 class App extends Component {
@@ -14,12 +15,13 @@ class App extends Component {
         <MuiThemeProvider theme={theme}>
         <CssBaseline />
         <Router>
-          <div>
+          <React.Fragment>
             <Nav />
             <Switch>
               <Route exact path="/" component={About} />
             </Switch>
-          </div>
+            <Footer />
+          </React.Fragment>
         </Router>
         </MuiThemeProvider>
       </React.Fragment>
