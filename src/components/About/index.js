@@ -2,12 +2,6 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 import withStyles from '@material-ui/core/styles/withStyles';
 import portrait from '../../images/me_portrait.jpg'
 
@@ -17,27 +11,27 @@ const styles = theme => ({
     overflow: 'hidden',
     marginTop: 10,
     padding: 20,
-    paddingBottom: 200
+    paddingBottom: 200,
+    [theme.breakpoints.between('md', 'lg')]: {
+      marginLeft: 120,
+      marginRight: 120
+    },
+    [theme.breakpoints.up('lg')]: {
+      marginLeft: 180,
+      marginRight: 180
+    }
   },
   header: {
     fontFamily: theme.typography.fontFamily,
     fontSize: 19,
     color: theme.palette.primary.contrastText,
-    [theme.breakpoints.between('md', 'lg')]: {
-      marginLeft: 120
-    },
-    [theme.breakpoints.up('lg')]: {
-      marginLeft: 180
-    }
   },
   imagePaper: {
     backgroundColor: theme.palette.primary.main,
     [theme.breakpoints.between('md', 'lg')]: {
-      marginLeft: 120,
       marginRight: 10
     },
     [theme.breakpoints.up('lg')]: {
-      marginLeft: 180,
       marginRight: 20
     },
     [theme.breakpoints.only('sm')]: {
@@ -49,23 +43,14 @@ const styles = theme => ({
     },
     marginTop: 20
   },
-  // card: {
-  //   // maxWidth: 345,
-  //   // maxWidth: '100%',
-  //   marginLeft: 60,
-  //   marginRight: 60,
-  //   backgroundColor: theme.palette.primary.main
-  // },
   aboutPaper: {
     [theme.breakpoints.between('md', 'lg')]: {
-      marginRight: 120,
       marginLeft: 10
     },
     [theme.breakpoints.only('sm')]: {
       marginLeft: 10
     },
     [theme.breakpoints.up('lg')]: {
-      marginRight: 180,
       marginLeft: 20
     },
     backgroundColor: theme.palette.primary.main,
@@ -86,7 +71,7 @@ const About = (props) => {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <Grid container justify="center" alignItems="flex-start" spacing={24}>
+      <Grid container justify="center" alignItems="flex-start" spacing={32}>
         <Grid item xs={12}>
           <Typography className={classes.header} variant="subheading" align="left">
             Full Stack Developer

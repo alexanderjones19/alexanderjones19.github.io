@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "title",
+    "image": "/images/me_portrait.jpg",
+    "githubLink": "githubLink",
+    "deployedLink": "deployedLink",
+    "description": "description"
+  },
+  {
+    "id": 2,
+    "title": "title 2",
+    "image": "image 2",
+    "githubLink": "githubLink 2",
+    "deployedLink": "deployedLink 2",
+    "description": "description 2"
+  }
+]

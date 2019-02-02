@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
+import portfolioItems from './portfolioitems.json';
 
 class App extends Component {
   render() {
@@ -21,7 +22,7 @@ class App extends Component {
             <Nav />
             <Switch>
               <Route exact path="/" component={About} />
-              <Route exact path="/portfolio" component={Portfolio} />
+              <Route exact path="/portfolio" render={(props) => <Portfolio {...props} portfolioItems={portfolioItems}/>} />
               <Route exact path="/contact" component={Contact} />
             </Switch>
             <Footer />
