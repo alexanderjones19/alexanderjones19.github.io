@@ -26,10 +26,11 @@ const styles = theme => ({
     }
   },
   card: {
-    maxWidth: 345
+    // maxHeight: 345
   },
   media: {
-    objectFit: 'cover'
+    objectFit: 'cover',
+    objectPosition: 'top'
   }
 });
 

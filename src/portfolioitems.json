@@ -1,18 +1,34 @@
 [
   {
     "id": 1,
-    "title": "title",
-    "image": "/images/me_portrait.jpg",
-    "githubLink": "githubLink",
-    "deployedLink": "deployedLink",
-    "description": "description"
+    "title": "Bootcamp Booster",
+    "image": "/images/bootcamp-booster.png",
+    "githubLink": "https://github.com/alexanderjones19/bootcamp-forum",
+    "deployedLink": "https://bootcampbooster.herokuapp.com",
+    "description": "Networking tool and forum for coding bootcamp students across the country"
   },
   {
     "id": 2,
-    "title": "title 2",
-    "image": "image 2",
-    "githubLink": "githubLink 2",
-    "deployedLink": "deployedLink 2",
-    "description": "description 2"
+    "title": "Mobile Mechanic",
+    "image": "/images/mobile-mechanic.png",
+    "githubLink": "https://github.com/fieldpalmer/Copper_Skull_Association",
+    "deployedLink": "http://mobile-mechanics.herokuapp.com",
+    "description": "Website for a mobile auto mechanic service"
+  },
+  {
+    "id": 3,
+    "title": "Donde",
+    "image": "/images/donde.png",
+    "githubLink": "https://github.com/lantanios/Group_Project",
+    "deployedLink": "https://donde1.herokuapp.com",
+    "description": "Geolocation website utilizing Google Maps API"
+  },
+  {
+    "id": 4,
+    "title": "Art Clicker",
+    "image": "/images/art-clicker.png",
+    "githubLink": "https://github.com/alexanderjones19/art-clicker",
+    "deployedLink": "https://alexanderjones19.github.io/art-clicker/",
+    "description": "React memory game featuring beautiful works of art"
   }
 ]
