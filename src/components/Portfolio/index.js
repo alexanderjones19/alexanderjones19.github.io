@@ -27,7 +27,7 @@ const styles = theme => ({
   },
   card: {
     // maxHeight: 345,
-    marginTop: 20
+    marginTop: 40
   },
   media: {
     objectFit: 'cover',
@@ -48,6 +48,7 @@ const styles = theme => ({
     borderBottom: `1px solid ${theme.palette.secondary.dark}`
   },
   cardActions: {
+    padding: 0,
     justifyContent: 'space-evenly',
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.primary.contrastText
@@ -58,10 +59,10 @@ const Portfolio = (props) => {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <Grid container justify="space-evenly" alignItems="center" spacing={24}>
+      <Grid container justify="space-evenly" alignItems="center" spacing={32}>
         {props.portfolioItems.map(item => (
           <Grid key={item.id} item xs={12} sm={6} md={4}>
-            <Card className={classes.card} raised={true}>
+            <Card className={classes.card} raised={true} square={true}>
               <CardMedia
                 component="img"
                 alt={item.title}
