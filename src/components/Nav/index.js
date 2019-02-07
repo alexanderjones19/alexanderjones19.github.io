@@ -29,12 +29,23 @@ const styles = theme => ({
       marginRight: 180
     },
     color: theme.palette.primary.contrastText,
-    '&:active': { color: theme.palette.secondary.dark }
+    // '&:active': { color: theme.palette.secondary.dark }
+    transition: 'color 0.75s ease',
+    '&:hover': {
+      color: theme.palette.secondary.dark,
+      backgroundColor: 'transparent'
+    },
+    '&:active': { color: theme.palette.primary.contrastText }
   },
   link: {
     color: theme.palette.primary.contrastText,
-    '&:active': { color: theme.palette.secondary.dark },
-    // '&:hover': { color: theme.palette.secondary.dark }
+    // '&:active': { color: theme.palette.secondary.dark },
+    transition: 'color 0.75s ease',
+    '&:hover': {
+      color: theme.palette.secondary.dark,
+      backgroundColor: 'transparent'
+    },
+    '&:active': { color: theme.palette.primary.contrastText }
   }
 });
 

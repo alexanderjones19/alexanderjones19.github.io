@@ -27,7 +27,7 @@ const styles = theme => ({
   },
   card: {
     // maxHeight: 345,
-    marginTop: 40
+    marginTop: 20
   },
   media: {
     objectFit: 'cover',
@@ -48,10 +48,15 @@ const styles = theme => ({
     borderBottom: `1px solid ${theme.palette.secondary.dark}`
   },
   cardActions: {
-    padding: 0,
+    // padding: 0,
     justifyContent: 'space-evenly',
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.primary.contrastText
+  },
+  header: {
+    fontFamily: theme.typography.fontFamily,
+    fontSize: 19,
+    color: theme.palette.primary.contrastText,
   }
 });
 
@@ -60,6 +65,11 @@ const Portfolio = (props) => {
   return (
     <div className={classes.root}>
       <Grid container justify="space-evenly" alignItems="center" spacing={32}>
+        <Grid item xs={12}>
+          <Typography className={classes.header} variant="subheading" align="left">
+            Portfolio
+          </Typography>
+        </Grid>
         {props.portfolioItems.map(item => (
           <Grid key={item.id} item xs={12} sm={6} md={4}>
             <Card className={classes.card} raised={true} square={true}>
@@ -80,16 +90,20 @@ const Portfolio = (props) => {
                 </Typography>
               </CardContent>
               <CardActions className={classes.cardActions}>
-                <Tooltip disableFocusListener disableTouchListener title="Github">
-                  <IconButton className={classes.cardButtons} color="inherit">
-                    <i className="fab fa-github"></i>
-                  </IconButton>
-                </Tooltip>
-                <Tooltip disableFocusListener disableTouchListener title="Deployed">
-                  <IconButton className={classes.cardButtons} color="inherit">
-                    <i className="fas fa-globe"></i>
-                  </IconButton>
-                </Tooltip>
+                <a href={item.githubLink} target="_blank" rel="noopener noreferrer">
+                  <Tooltip disableFocusListener disableTouchListener title="Github">
+                    <IconButton className={classes.cardButtons} color="inherit">
+                      <i className="fab fa-github"></i>
+                    </IconButton>
+                  </Tooltip>
+                </a>
+                <a href={item.deployedLink} target="_blank" rel="noopener noreferrer">
+                  <Tooltip disableFocusListener disableTouchListener title="Deployed">
+                    <IconButton className={classes.cardButtons} color="inherit">
+                      <i className="fas fa-globe"></i>
+                    </IconButton>
+                  </Tooltip>
+                </a>
               </CardActions>
             </Card>
           </Grid>
