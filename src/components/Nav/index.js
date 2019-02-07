@@ -19,7 +19,15 @@ const styles = theme => ({
       fontSize: 25,
       marginLeft: 180
     },
-    flexGrow: 1
+    flexGrow: 1,
+    color: theme.palette.primary.contrastText,
+    transition: 'color 0.75s ease',
+    '&:hover': {
+      color: theme.palette.secondary.dark,
+      backgroundColor: 'transparent'
+    },
+    '&:active': { color: theme.palette.primary.contrastText },
+    textDecoration: 'none'
   },
   marginLink: {
     [theme.breakpoints.between('md', 'lg')]: {
@@ -29,7 +37,6 @@ const styles = theme => ({
       marginRight: 180
     },
     color: theme.palette.primary.contrastText,
-    // '&:active': { color: theme.palette.secondary.dark }
     transition: 'color 0.75s ease',
     '&:hover': {
       color: theme.palette.secondary.dark,
@@ -39,7 +46,6 @@ const styles = theme => ({
   },
   link: {
     color: theme.palette.primary.contrastText,
-    // '&:active': { color: theme.palette.secondary.dark },
     transition: 'color 0.75s ease',
     '&:hover': {
       color: theme.palette.secondary.dark,
@@ -54,8 +60,8 @@ const Nav = (props) => {
   return (
     <AppBar position="static" className={classes.appBar}>
       <Toolbar>
-        <Typography className={classes.logo} variant="title" color="inherit">
-          Alexander Jones
+        <Typography component={NavLink} to="/" className={classes.logo} variant="title" color="inherit">
+            Alexander Jones
         </Typography>
         <Button component={NavLink} to="/" color="inherit" className={classes.link}>About</Button>
         <Button component={NavLink} to="/portfolio" color="inherit" className={classes.link}>Portfolio</Button>
