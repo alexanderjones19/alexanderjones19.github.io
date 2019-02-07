@@ -10,6 +10,9 @@ const styles = theme => ({
   appBar: {
     borderBottom: `1px solid ${theme.palette.secondary.dark}`
   },
+  logoSpacer: {
+    flexGrow: 1
+  },
   logo: {
     [theme.breakpoints.between('md', 'lg')]: {
       fontSize: 25,
@@ -19,7 +22,7 @@ const styles = theme => ({
       fontSize: 25,
       marginLeft: 180
     },
-    flexGrow: 1,
+    // flexGrow: 1,
     color: theme.palette.primary.contrastText,
     transition: 'color 0.75s ease',
     '&:hover': {
@@ -63,6 +66,7 @@ const Nav = (props) => {
         <Typography component={NavLink} to="/" className={classes.logo} variant="title" color="inherit">
             Alexander Jones
         </Typography>
+        <div className={classes.logoSpacer}></div>
         <Button component={NavLink} to="/" color="inherit" className={classes.link}>About</Button>
         <Button component={NavLink} to="/portfolio" color="inherit" className={classes.link}>Portfolio</Button>
         <Button component={NavLink} to="/contact" color="inherit" className={classes.marginLink}>Contact</Button>
