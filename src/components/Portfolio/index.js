@@ -26,7 +26,6 @@ const styles = theme => ({
     }
   },
   card: {
-    // maxHeight: 345,
     marginTop: 20
   },
   media: {
@@ -34,7 +33,7 @@ const styles = theme => ({
     objectPosition: 'top'
   },
   cardButtons: {
-    // width: '50%',
+    color: theme.palette.primary.contrastText,
     transition: 'color 0.75s ease',
     '&:hover': {
       color: theme.palette.secondary.dark,
@@ -48,7 +47,6 @@ const styles = theme => ({
     borderBottom: `1px solid ${theme.palette.secondary.dark}`
   },
   cardActions: {
-    // padding: 0,
     justifyContent: 'space-evenly',
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.primary.contrastText

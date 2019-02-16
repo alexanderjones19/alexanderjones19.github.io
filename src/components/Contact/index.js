@@ -60,7 +60,6 @@ const Contact = (props) => {
             Contact
           </Typography>
         </Grid>
-        {/* <div className={classes.contactContainer}> */}
         <Grid container className={classes.contactContainer} justify="center" alignItems="center" spacing={32}>
           <Grid item xs={12} sm={6} md={3} className={classes.contactItems}>
             <a href="/images/Resume.pdf" target="_blank">
@@ -98,7 +97,6 @@ const Contact = (props) => {
               </Tooltip>
             </a>
           </Grid>
-        {/* </div> */}
         </Grid>
       </Grid>
     </div>

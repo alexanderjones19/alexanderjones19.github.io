@@ -85,15 +85,15 @@ const About = (props) => {
         <Grid item xs={12} sm={8}>
           <Paper className={classes.aboutPaper} elevation={8} square={true}>
             <Typography className={classes.aboutText} variant="body1">
-              I am a budding full-stack developer with an interest in all things in the web development world. This website will be used to showcase some of the projects that I complete throughout my burgeoning career as a full-stack developer. Some of my other interests and hobbies include playing and producing music, spending time with my family, and brazilian jiu-jitsu.
+              I am a full-stack developer with an interest in making websites and apps. This website will be used to showcase some of the projects that I work on. I enjoy working with javascript and React and enjoy learning the newest technoldogies that come out. Some of my other interests and hobbies include playing and producing music, spending time with my family, and brazilian jiu-jitsu.
             </Typography>
             <br/>
             <Typography className={classes.aboutText} variant="body1">
-              I am constantly seeking to improve and further my knowledge in the field of web development. I am a creative, detail-oriented person at heart.
+              I am constantly seeking to improve and further my knowledge in the field of web development. I enjoy working collaboratively and am creative and detail-oriented.
             </Typography>
             <br/>
             <Typography className={classes.aboutText} variant="body1">
-              I look forward to showing you all what I am capable of creating. Please feel free to reach out and submit your information on the contact page to get in touch.
+              I look forward to showing you all what I am capable of creating. Please feel free to reach out on the contact page to get in touch.
             </Typography>
           </Paper>
         </Grid>
