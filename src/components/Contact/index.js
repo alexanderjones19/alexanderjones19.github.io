@@ -1,7 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import Paper from '@material-ui/core/Paper';
+// import Paper from '@material-ui/core/Paper';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 import withStyles from '@material-ui/core/styles/withStyles';
@@ -42,6 +42,12 @@ const styles = theme => ({
     fontSize: 75,
     [theme.breakpoints.down('sm')]: {
       fontSize: 100
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: 160
+    },
+    [theme.breakpoints.only('sm')]: {
+      fontSize: 160
     }
   },
   contactItems: {
@@ -62,7 +68,7 @@ const Contact = (props) => {
         </Grid>
         <Grid container className={classes.contactContainer} justify="center" alignItems="center" spacing={32}>
           <Grid item xs={12} sm={6} md={3} className={classes.contactItems}>
-            <a href="/images/Resume.pdf" target="_blank">
+            <a href="/images/ResumeAlexanderJones.pdf" target="_blank">
               <Tooltip disableFocusListener disableTouchListener title="Resume">
                 <IconButton className={classes.contactButtons} color="inherit">
                   <i className="fas fa-file-pdf"></i>
