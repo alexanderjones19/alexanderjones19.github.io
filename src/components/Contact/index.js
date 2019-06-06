@@ -62,7 +62,7 @@ const Contact = (props) => {
     <div className={classes.root}>
       <Grid container justify="center" alignItems="flex-start" spacing={32}>
         <Grid item xs={12}>
-          <Typography className={classes.header} variant="subheading" align="left">
+          <Typography className={classes.header} variant="subtitle1" align="left">
             Contact
           </Typography>
         </Grid>

@@ -18,8 +18,9 @@ const theme = createMuiTheme({
     }
   },
   typography: {
+    useNextVariants: true,
     fontFamily: '"Raleway", sans-serif',
-    title: {
+    h6: {
       fontFamily: '"Comfortaa", cursive'
     }
   }

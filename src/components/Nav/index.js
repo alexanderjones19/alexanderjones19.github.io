@@ -63,7 +63,7 @@ const Nav = (props) => {
   return (
     <AppBar position="static" className={classes.appBar}>
       <Toolbar>
-        <Typography component={NavLink} to="/" className={classes.logo} variant="title" color="inherit">
+        <Typography component={NavLink} to="/" className={classes.logo} variant="h6" color="inherit">
             Alexander Jones
         </Typography>
         <div className={classes.logoSpacer}></div>
